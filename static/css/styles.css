@@ -98,7 +98,7 @@ a {
     /* border: 1px solid red; */
     /* display: flex; */
     white-space: nowrap;
-    overflow-x:inherit;
+    overflow-x: auto;
 }
 
 .list-item {
@@ -118,8 +118,6 @@ main  {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;
-
 }
 
 .tag:before {
@@ -234,4 +232,10 @@ main  {
 {
     fill: white;
     color: white;
+}
+
+@media screen and (min-width: 764px) {
+    main {
+        align-items: center;
+    }
 }
