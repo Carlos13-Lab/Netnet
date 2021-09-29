@@ -44,7 +44,7 @@ a {
     position: relative;
     z-index: 2;
     background-image: linear-gradient(to bottom, black 0% , black 50%,rgba(0,0,0 , .5) 85%, transparent 100%);
-
+    height: auto;
 }
 
 .navigation-item {
@@ -67,6 +67,8 @@ a {
 .featured {
     margin-top: -90px;
     position: relative;
+    overflow: hidden;
+    text-align: center;
 }
 .featured-details {
     /* border: 1px solid red; */
@@ -74,7 +76,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(to top, black 0%, transparent 100%);
+    background-image: linear-gradient(to top, black 0%, black 40%,transparent 100%);
 }
 
 .tags {
@@ -89,6 +91,33 @@ a {
 .tag {
     /* border: 1px solid red; */
     display: flex;
+}
+
+.list-content {
+    /* border: 1px solid red; */
+    /* display: flex; */
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.list-item {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.list-item:first-child {
+    margin-left: 0;
+}
+
+.list {
+    padding: 0 1em;
+}
+
+main  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 
 .tag:before {
@@ -107,4 +136,69 @@ a {
     justify-content: space-evenly;
     align-items: center;
     padding-bottom: 2em;
+}
+
+
+.button {
+    /* border: 1px solid blue; */
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 6px 1em 6px .5em;
+    border: none;
+    border-radius: 1px;
+}
+
+.button::before {
+    content: '';
+    /* border: 1px solid red; */
+    display: inline-block;
+    width: 25px;
+    height: 25px;   
+     margin-right: 5px;
+
+}
+.button-secondary {
+    /* border: 1px solid red; */
+    background: none;
+    color: #ffff;
+    font-size: 1.1em;
+}
+
+
+.button-secondary::before {
+    content: '';
+    display: block;
+    /* border: 1px solid green */
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+
+.icon-plus::before {
+    background: url('../../images/icons/plus.svg');
+}
+
+.icon-play::before {
+    background: url('../../images/icons/play.svg');
+}
+
+.icon-info::before {
+    background: url('../../images/icons/info.svg');
+}
+
+
+.footer {
+    /* border: 1px solid red; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+}
+
+.tab-list {
+    border: 1px solid green;
 }
